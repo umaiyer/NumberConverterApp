@@ -1,4 +1,3 @@
-
 public class Decimal {
 	
 	char [] decToHex;
