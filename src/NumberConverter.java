@@ -7,7 +7,6 @@
 // Decimal -> Hexadecimal
 // Hexadecimal -> Binary
 // Hexadecimal -> Decimal
-
 public class NumberConverter {	
 	
 	public static void main(String[] args) {
