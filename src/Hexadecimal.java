@@ -1,17 +1,20 @@
 import java.util.HashMap;
 
+// This class is used to convert hexadecimal numbers to binary and decimal numbers
 public class Hexadecimal {
 	
-	// mapping from hex characters to integer
+	// Mapping from hex characters
 	HashMap<Character, Integer> hexToDec;
 	HashMap<Character, String> hexToBin;
 	
+	// 
 	public Hexadecimal(NumberType outputType) throws Exception {
 		if (outputType == NumberType.Decimal) initHexToDec();
 		else if (outputType == NumberType.Binary) initHexToBin();
 		else throw new Exception("Unsupported Conversion");
 	}
 	
+	// Initialize Hexadecimal to decimal mapping
 	private void initHexToDec() {
 		hexToDec = new HashMap<Character, Integer>();
 		
@@ -33,6 +36,7 @@ public class Hexadecimal {
 		hexToDec.put('F', 15);		
 	}
 	
+	// Initialize Hexadecimal to binary mapping 	
 	private void initHexToBin() {
 		hexToBin = new HashMap<Character, String>();
 		
@@ -54,6 +58,8 @@ public class Hexadecimal {
 		hexToBin.put('F', "1111");
 	}
 	
+	// Convert Hexadecimal to Decimal 
+	// Throws exception if hexadecimal not found in string
 	public int convertToDecimal(String inputHex) throws Exception {
 		int pow=0;
 		int base=16;
@@ -71,7 +77,9 @@ public class Hexadecimal {
 		}
 		return outputInt;
 	}
-	
+
+	// Convert Hexadecimal to Binary
+	// Throws exception if hexadecimal not found in string
 	public String convertToBinary(String inputHex) throws Exception {
 		StringBuffer outputStr = new StringBuffer();
 		
