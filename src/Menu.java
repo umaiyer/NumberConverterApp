@@ -1,3 +1,6 @@
+// GUI class that is the main entry point for providing 
+// the user with the options to convert different number types
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
