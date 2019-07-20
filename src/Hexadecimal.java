@@ -1,6 +1,6 @@
+// This class is used to convert hexadecimal numbers to binary and decimal numbers
 import java.util.HashMap;
 
-// This class is used to convert hexadecimal numbers to binary and decimal numbers
 public class Hexadecimal {
 	
 	// Mapping from hex characters
