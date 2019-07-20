@@ -27,11 +27,11 @@ public class Binary {
 		int remainder = len % HEX_CHAR_LEN;
 		if (remainder != 0) {
 			String tempStr = inputBinary.substring(0, remainder);
-			int tempDec = convert(tempStr, HEX_CHAR_LEN);
+			int tempDec = convert(tempStr, tempStr.length());
 			retVal.append(decToHex[tempDec]);
 		}
 		
-		// convert remaining char in sets of 4
+		// convert remaining binary char in sets of 4 to their equivalent hexadecimal representation
 		int idx = remainder;				
 		while (idx < len) { 			
 			String tempStr = inputBinary.substring(idx, idx+HEX_CHAR_LEN);
