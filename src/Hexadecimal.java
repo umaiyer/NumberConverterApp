@@ -59,27 +59,26 @@ public class Hexadecimal {
 	}
 	
 	// Convert Hexadecimal to Decimal 
-	// Throws exception if hexadecimal not found in string
+	// Throws exception if hexadecimal character 0-F not found in input string
 	public int convertToDecimal(String inputHex) throws Exception {
 		int pow=0;
 		int base=16;
-		int idx=inputHex.length()-1;
+		int idx=inputHex.length();
 		int outputInt = 0;
-		while(idx >= 0) {
+		while(--idx >= 0) {
 			char tChar = inputHex.charAt(idx);
 			// check if valid hex char
 			if (hexToDec.containsKey(tChar))
 				outputInt += (hexToDec.get(tChar) * Math.pow(base,pow));
 			else 
 				throw new Exception("Unsupported Hexadecimal character " + tChar);
-			idx--;
 			pow++;
 		}
 		return outputInt;
 	}
 
 	// Convert Hexadecimal to Binary
-	// Throws exception if hexadecimal not found in string
+	// Throws exception if hexadecimal not found in input string
 	public String convertToBinary(String inputHex) throws Exception {
 		StringBuffer outputStr = new StringBuffer();
 		

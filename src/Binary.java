@@ -45,10 +45,10 @@ public class Binary {
 	
 	// Utility method to convert any binary string to its equivalent decimal value
 	private int convert(String inputStr, int strLength) throws Exception {
-		int idx = strLength-1;
+		int idx = strLength;
 		int powerOf2 = 0;
 		int retInteger = 0;
-		while (idx >=0) {
+		while (--idx >=0) {
 			int nextInt = Character.getNumericValue(inputStr.charAt(idx));
 			if (nextInt == 1)
 				retInteger +=  Math.pow(2, powerOf2);
@@ -56,7 +56,6 @@ public class Binary {
 				throw new Exception("Invalid Binary String");
 			
 			powerOf2++;
-			idx--;
 		}
 		return retInteger;
 	}
